@@ -1,12 +1,8 @@
-//
-// Created by vboxuser on 2/14/24.
-//
 
-#ifndef UNTITLED_NUMCLASS_H
-#define UNTITLED_NUMCLASS_H
-//
-// Created by nadav on 13/02/2024.
-//
+
+#ifndef NUMCLASS_H
+#define NUMCLASS_H
+
 
 int power(int x, int y);
 int isPrime(int num);
