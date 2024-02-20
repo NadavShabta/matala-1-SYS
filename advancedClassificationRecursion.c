@@ -3,11 +3,9 @@
 //
 
 #include "NumClass.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 
 int power(int x, int y){
-    int exp =y;
     int base =x;
     int sum=1;
     for (int i = 0; i < y; ++i) {
