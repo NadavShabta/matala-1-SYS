@@ -26,7 +26,16 @@ libclassrec.a : basicClassification.o advancedClassificationRecursion.o
 	$(AR) rcs &@ &^
 
 libclassloops.so : basicClassification.o advancedClassificationLoop.o
+	$(CC) $(CFLAG) -shared -fPIC -o $@ $^
 
-all: mains
+libclassloops.so : basicClassification.o advancedClassificationRecursive.o
+	$(CC) $(CFLAG) -shared -fPIC -o $@ $^
+
+all: recursives recursived loopd loops mains maindrec maindloop
+
+%.o:%.c
+	$(CC) $(CFLAG) -c -o $@ $^
+clean:
+	rm -f *.a *.so *.o main mains maindloop maindrec
 
 .PHONY: loops recursives recusived loopd all clean
