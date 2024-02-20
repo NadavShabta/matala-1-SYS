@@ -27,12 +27,6 @@ libclassrec.a : basicClassification.o advancedClassificationRecursion.o
 
 libclassloops.so : basicClassification.o advancedClassificationLoop.o
 
+all: mains
 
-
-
-
-
-
-
-
-
+.PHONY: loops recursives recusived loopd all clean
