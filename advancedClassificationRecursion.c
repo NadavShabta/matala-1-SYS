@@ -5,7 +5,7 @@
 #include "NumClass.h"
 
 
-int isPalindromeRecursive(int num) {
+int isPalindrome(int num) {
     int number = 0;
     int n = 0;
     int left=0;
@@ -28,7 +28,7 @@ int isPalindromeRecursive(int num) {
     if(left==right){
         number=(num% power(10,n-1))/10;
 //        number=num -(left*(power(10,n-1)) + right);
-        return isPalindromeRecursive(number);
+        return isPalindrome(number);
 
     }else {
         return 0;
@@ -37,7 +37,7 @@ int isPalindromeRecursive(int num) {
 
 
 
-int isArmstrongRecursive(int num) {
+int isArmstrong(int num) {
     int number = 0;
     static int sum;
     int right = 0;
@@ -68,7 +68,7 @@ int isArmstrongRecursive(int num) {
             return 0;
         }
     } else {
-        isArmstrongRecursive(number);
+        isArmstrong(number);
     }
     originalNum =0;
     sum =0;
