@@ -9,8 +9,6 @@ int isPrime(int num);
 int isStrong (int num);
 int isArmstrong(int num);
 int isPalindrome(int num);
-int isPalindromeRecursive(int num);
-int isArmstrongRecursive(int num);
 
 
 
