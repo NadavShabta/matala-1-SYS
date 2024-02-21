@@ -5,14 +5,6 @@
 #include "NumClass.h"
 
 
-int power(int x, int y){
-    int base =x;
-    int sum=1;
-    for (int i = 0; i < y; ++i) {
-        sum*=base;
-    }
-    return sum;
-}
 int isPalindromeRecursive(int num) {
     int number = 0;
     int n = 0;
