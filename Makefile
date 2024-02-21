@@ -19,7 +19,7 @@ maindloop: loopd main.c
 maindrec: recursived main.c
 	$(CC) $(CFLAG) -o maindrec main.c -L. -lclassrec
 %.o:%.c
-	$(CC) $(CFLAG) -c -o $@ $^
+	$(CC) $(CFLAG) -fPIC -c -o $@ $^
 
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
 	$(AR) rcs $@ $^
@@ -30,7 +30,7 @@ libclassrec.a : basicClassification.o advancedClassificationRecursion.o
 libclassloops.so : basicClassification.o advancedClassificationLoop.o
 	$(CC) $(CFLAG) -shared -fPIC -o $@ $^
 
-libclassrec.so : basicClassification.o advancedClassificationRecursive.o
+libclassrec.so : basicClassification.o advancedClassificationRecursion.o
 	$(CC) $(CFLAG) -shared -fPIC -o $@ $^
 
 all: recursives recursived loopd loops mains maindrec maindloop
