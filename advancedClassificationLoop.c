@@ -6,14 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int power(int x, int y){
-    int base =x;
-    int sum=1;
-    for (int i = 0; i < y; ++i) {
-        sum*=base;
-    }
-    return sum;
-}
 
 int isArmstrong(int num){
     int  number =0;
